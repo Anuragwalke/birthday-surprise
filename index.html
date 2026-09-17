@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no">
+
+    <meta name="theme-color"
+        content="#120014">
+
+    <title>For You ❤️</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Floating background -->
+<div id="background-hearts"></div>
+
+
+<!-- ========================= -->
+<!-- SCENE 1 -->
+<!-- ========================= -->
+
+<section
+    id="scene1"
+    class="scene active">
+
+    <div class="intro">
+
+        <div class="tiny">
+            I MADE SOMETHING
+            SPECIAL FOR YOU Aish
+        </div>
+
+        <h1>
+
+            Hey...
+
+            <br>
+
+            <span>You ❤️</span>
+
+        </h1>
+
+        <p>
+            There's a little surprise
+            waiting for you.
+        </p>
+
+        <button
+            class="main-button"
+            onclick="startExperience()">
+
+            ✨ DON'T CLICK THIS ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SCENE 2 -->
+<!-- ========================= -->
+
+<section
+    id="scene2"
+    class="scene">
+
+    <div class="center">
+
+        <div class="heart-big">
+            ❤️
+        </div>
+
+        <h2>
+            Wait...
+        </h2>
+
+        <p>
+            This isn't just another
+            birthday wish...
+        </p>
+
+        <h1>
+
+            It's made specially
+
+            <br>
+
+            for
+
+            <span id="girlName">
+                YOU
+            </span>
+
+            ❤️
+
+        </h1>
+
+        <button
+            class="next-button"
+            onclick="showScene(3)">
+
+            Tap to continue →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SCENE 3 -->
+<!-- ========================= -->
+
+<section
+    id="scene3"
+    class="scene">
+
+    <div class="memory">
+
+        <div class="section-title">
+
+            OUR LITTLE MOMENTS ❤️
+
+        </div>
+
+
+        <div class="photo-container">
+
+            <img
+                id="memoryPhoto"
+                src="images/photo1.jpg">
+
+            <div class="photo-caption">
+
+                <p id="memoryCaption">
+
+                    Every moment with you
+                    becomes a beautiful memory.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="next-button"
+            onclick="nextMemory()">
+
+            ❤️ Next Memory
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SCENE 4 -->
+<!-- ========================= -->
+
+<section
+    id="scene4"
+    class="scene">
+
+    <div class="letter-area">
+
+        <div class="tiny">
+
+            I HAVE SOMETHING
+            TO TELL YOU...
+
+        </div>
+
+
+        <div
+            id="envelope"
+            class="envelope"
+            onclick="openLetter()">
+
+            <div class="envelope-heart">
+                ❤️
+            </div>
+
+            <div class="open-text">
+                TAP TO OPEN
+            </div>
+
+        </div>
+
+
+        <div
+            id="letter"
+            class="letter">
+
+            <h2>
+                To My Special Person ❤️
+            </h2>
+
+            <p>
+                You came into my life and somehow
+                made ordinary days feel special.
+                I'm really lucky to have you. ❤️
+            </p>
+
+            <p>
+                I hope your smile never
+                disappears, your dreams
+                keep getting bigger,
+                and your life keeps
+                becoming more beautiful.
+            </p>
+
+            <p>
+                Thank you for being you. ❤️
+            </p>
+
+
+            <button
+                class="next-button"
+                onclick="showScene(5)">
+
+                Continue ❤️
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SCENE 5 -->
+<!-- ========================= -->
+
+<section
+    id="scene5"
+    class="scene">
+
+    <div class="birthday">
+
+        <h2>
+            Make a Wish...
+        </h2>
+
+
+        <div
+            class="cake"
+            onclick="blowCandles()">
+
+
+            <div
+                class="candle candle-one">
+
+                <div class="flame"></div>
+
+            </div>
+
+
+            <div
+                class="candle candle-two">
+
+                <div class="flame"></div>
+
+            </div>
+
+
+            <div
+                class="candle candle-three">
+
+                <div class="flame"></div>
+
+            </div>
+
+
+            <div class="cake-top"></div>
+
+
+            <div class="cake-body">
+
+                🎂
+
+            </div>
+
+        </div>
+
+
+        <p id="cakeText">
+
+            Tap the cake ❤️
+
+        </p>
+
+
+        <button
+            id="finalButton"
+            class="next-button hidden"
+            onclick="showScene(6)">
+
+            One Last Surprise 💖
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SCENE 6 -->
+<!-- ========================= -->
+
+<section
+    id="scene6"
+    class="scene">
+
+    <div class="final">
+
+        <div class="final-heart">
+
+            ❤️
+
+        </div>
+
+
+        <h1>
+
+            Happy Birthday
+
+        </h1>
+
+
+        <h2 id="finalName">
+
+            My Special Person ❤️
+
+        </h2>
+
+
+        <p class="final-message">
+
+            No matter where life
+            takes us...
+
+            <br><br>
+
+            I'm really happy
+            that I met you.
+
+            <br><br>
+
+            Keep smiling.
+            <br>
+            Keep shining.
+            <br>
+            Keep being you. Aishwarya ❤️
+
+        </p>
+
+
+        <div class="special">
+
+            ✨ You are special ✨
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- MUSIC -->
+
+<audio id="music" loop preload="auto">
+    <source src="./music.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1053 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    background: #08000d;
+
+    touch-action: manipulation;
+}
+
+
+/* =========================
+   SCENES
+========================= */
+
+.scene {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        scale(1.08);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease,
+
+        visibility 1s;
+
+}
+
+.scene.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================
+   BACKGROUNDS
+========================= */
+
+#scene1 {
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #51093e,
+            #170019 55%,
+            #050006
+        );
+
+}
+
+
+#scene2 {
+
+    background:
+
+        radial-gradient(
+            circle,
+            #630b4d,
+            #100014
+        );
+
+}
+
+
+#scene3 {
+
+    background:
+
+        radial-gradient(
+            circle,
+            #45153f,
+            #08000e
+        );
+
+}
+
+
+#scene4 {
+
+    background:
+
+        radial-gradient(
+            circle,
+            #4b123e,
+            #0b0010
+        );
+
+}
+
+
+#scene5 {
+
+    background:
+
+        radial-gradient(
+            circle,
+            #56133f,
+            #08000d
+        );
+
+}
+
+
+#scene6 {
+
+    background:
+
+        radial-gradient(
+            circle,
+            #79165b,
+            #100013 70%
+        );
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+
+    width: 90%;
+
+    max-width: 600px;
+
+}
+
+.tiny {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    opacity: .7;
+
+    margin-bottom: 25px;
+
+}
+
+
+.intro h1 {
+
+    font-size:
+        clamp(60px, 15vw, 110px);
+
+    line-height: .9;
+
+    margin-bottom: 30px;
+
+}
+
+
+.intro h1 span {
+
+    color: #ff7ac2;
+
+    text-shadow:
+
+        0 0 15px #ff1493,
+
+        0 0 40px #ff1493;
+
+}
+
+
+.intro p {
+
+    opacity: .8;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+}
+
+
+.main-button,
+.next-button {
+
+    padding:
+
+        16px 28px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff1493,
+            #8c00ff
+        );
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255, 20, 147, .45);
+
+    transition:
+        .3s;
+
+}
+
+
+.main-button:hover,
+.next-button:hover {
+
+    transform:
+        scale(1.07);
+
+    box-shadow:
+
+        0 0 40px
+        rgba(255, 20, 147, .8);
+
+}
+
+
+.main-button:active,
+.next-button:active {
+
+    transform:
+        scale(.94);
+
+}
+
+
+/* =========================
+   SCENE 2
+========================= */
+
+.center {
+
+    width: 90%;
+
+    max-width: 650px;
+
+}
+
+
+.heart-big {
+
+    font-size: 90px;
+
+    margin-bottom: 20px;
+
+    filter:
+
+        drop-shadow(
+            0 0 25px #ff1493
+        );
+
+    animation:
+
+        heartbeat 1.2s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.center h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.center p {
+
+    opacity: .8;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.center h1 {
+
+    font-size:
+        clamp(30px, 7vw, 55px);
+
+    line-height: 1.2;
+
+    margin-bottom: 35px;
+
+}
+
+
+.center h1 span {
+
+    color: #ff75bd;
+
+    text-shadow:
+
+        0 0 20px #ff1493;
+
+}
+
+
+/* =========================
+   MEMORY
+========================= */
+
+.memory {
+
+    width: 90%;
+
+    max-width: 430px;
+
+}
+
+
+.section-title {
+
+    letter-spacing: 3px;
+
+    color: #ff8ccc;
+
+    margin-bottom: 20px;
+
+}
+
+
+.photo-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(255,20,147,.3);
+
+}
+
+
+.photo-container img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity .5s;
+
+}
+
+
+.photo-caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 30px 20px 25px;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+
+}
+
+
+.photo-caption p {
+
+    line-height: 1.5;
+
+    font-size: 16px;
+
+}
+
+
+.memory .next-button {
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.letter-area {
+
+    width: 90%;
+
+    max-width: 500px;
+
+}
+
+
+.envelope {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 190px;
+
+    margin: 35px auto;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3d91,
+            #c3006f
+        );
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 0 45px
+        rgba(255,20,147,.55);
+
+    transition:
+        .4s;
+
+}
+
+
+.envelope:hover {
+
+    transform:
+        scale(1.06);
+
+}
+
+
+.envelope-heart {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 55px;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 55px;
+
+}
+
+
+.open-text {
+
+    position: absolute;
+
+    bottom: 18px;
+
+    width: 100%;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.letter {
+
+    display: none;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    backdrop-filter:
+        blur(15px);
+
+    animation:
+        letterAppear 1s ease;
+
+}
+
+
+.letter.show {
+
+    display: block;
+
+}
+
+
+.letter h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.letter p {
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+
+@keyframes letterAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.birthday {
+
+    width: 90%;
+
+    text-align: center;
+
+}
+
+
+.birthday h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.cake {
+
+    position: relative;
+
+    width: 230px;
+
+    height: 210px;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    transition:
+        .3s;
+
+}
+
+
+.cake:hover {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.cake-body {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 230px;
+
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 70px;
+
+    border-radius:
+        20px 20px 30px 30px;
+
+    background:
+        linear-gradient(
+            #ff6eaa,
+            #c72876
+        );
+
+}
+
+
+.cake-top {
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 15px;
+
+    width: 200px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background:
+        #ffd0e4;
+
+    z-index: 2;
+
+}
+
+
+.candle {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 12px;
+
+    height: 60px;
+
+    background: white;
+
+    border-radius: 5px;
+
+    z-index: 5;
+
+}
+
+
+.candle-one {
+
+    left: 65px;
+
+}
+
+
+.candle-two {
+
+    left: 109px;
+
+}
+
+
+.candle-three {
+
+    left: 153px;
+
+}
+
+
+.flame {
+
+    position: absolute;
+
+    width: 17px;
+
+    height: 23px;
+
+    top: -23px;
+
+    left: -2px;
+
+    border-radius: 50%;
+
+    background: #ffd166;
+
+    box-shadow:
+
+        0 0 15px #ff9900,
+
+        0 0 30px #ff9900;
+
+    animation:
+        flame .5s infinite alternate;
+
+}
+
+
+@keyframes flame {
+
+    from {
+
+        transform:
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            scale(1.15);
+
+    }
+
+}
+
+
+.flame.off {
+
+    display: none;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+.birthday #cakeText {
+
+    margin-top: 25px;
+
+    opacity: .8;
+
+}
+
+
+.birthday .next-button {
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    width: 90%;
+
+    max-width: 600px;
+
+}
+
+
+.final-heart {
+
+    font-size: 100px;
+
+    filter:
+
+        drop-shadow(
+            0 0 35px #ff1493
+        );
+
+    animation:
+        heartbeat 1.2s infinite;
+
+}
+
+
+.final h1 {
+
+    font-size:
+        clamp(45px, 10vw, 75px);
+
+    color: #ff86c8;
+
+    margin-top: 20px;
+
+}
+
+
+.final h2 {
+
+    font-size: 28px;
+
+    margin:
+        10px 0 25px;
+
+}
+
+
+.final-message {
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+    opacity: .9;
+
+}
+
+
+.special {
+
+    margin-top: 35px;
+
+    letter-spacing: 3px;
+
+    color: #ff9ed2;
+
+}
+
+
+/* =========================
+   TOUCH BUBBLES
+========================= */
+
+.touch-bubble {
+
+    position: fixed;
+
+    width: 25px;
+
+    height: 25px;
+
+    border:
+        2px solid
+        #ff91c9;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    animation:
+        bubble .8s ease forwards;
+
+}
+
+
+@keyframes bubble {
+
+    from {
+
+        transform:
+            scale(.3);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            scale(5);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    animation:
+        floatUp 4s linear forwards;
+
+}
+
+
+@keyframes floatUp {
+
+    from {
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(.5);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            translateX(var(--move))
+            scale(1.4);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .photo-container {
+
+        height: 430px;
+
+    }
+
+    .envelope {
+
+        width: 270px;
+
+        height: 170px;
+
+    }
+
+    .letter {
+
+        padding: 22px;
+
+    }
+
+}
